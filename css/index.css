@@ -1,4 +1,25 @@
 /* 600px tablet min width 768 desktop  */
+img{
+  min-height: 280px;
+  max-height: 280px;
+  width: 100%;
+}
+.background{
+  background-image: url(../img/background.png);
+}
+.anime{
+  height: 200px;
+  width: auto;
+}
+.mt-100{
+  margin-top:40% ;
+}
+.carousel-item .card{
+  height:20rem;
+}
+.carousel{
+  background-color: #e6f5dc;
+}
 .navbar-item{
   display: flex;
 
@@ -7,8 +28,8 @@
   float: right;
 }
 .card-body{
-  min-height:10px;
-  max-height: 120px;
+  min-height:10rem;
+  max-height: 10rem;
   width: auto;
 }
 .card-content img:hover{
@@ -30,5 +51,13 @@
   .navbar-item{
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and(max-width:576px) {
+    .row .col-4 .carousel-item .card img{
+    min-height:0.1rem;
+    max-height:0.1rem;
+    width: 100%;
   }
 }
