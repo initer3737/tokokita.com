@@ -55,9 +55,14 @@ img{
 }
 
 @media screen and(max-width:576px) {
-    .row .col-4 .carousel-item .card img{
+    /* .row .col-4 .carousel-item .card img{
     min-height:0.1rem;
     max-height:0.1rem;
     width: 100%;
+  } */
+
+  .carousel-item .card-content img{
+    width: 100%;
+    height:auto;
   }
 }
