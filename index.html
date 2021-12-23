@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   </head>
-  <body>
+  <body class="bg-auth">
     <header class=" bg-success p-3">
       <div class="nav navbar-nav navbar-expand-lg">
         <div class="navbar-dark">
@@ -28,6 +28,10 @@
                     <a href="pages/products.html" class="nav-link">Products</a>
                     <a href="pages/about.html" class="nav-link">About</a>
                     <a href="pages/bestseller.html" class="nav-link">Best Seller</a>
+                    <a href="#" class="nav-link">
+                      <p class="text-light" id="userData"><i class="fa fa-user-circle text-light" id="userIcon"></i> <b id="username"></b></p>
+                    </a>
+                    <a role="button" onclick="logOut()" class="nav-link"><i class="fas fa-sign-out-alt" id="btn-logout"></i> logOut</a>
                   </div>
               </div>
             </div>
@@ -35,7 +39,7 @@
         </div>
       </div>
     </header>
-    <div class="container">
+    <!-- <div class="container">
 
       <div class="row g-4 bg-light d-flex justify-content-center mt-4">
         <p class="text-center m-3">Makanan | Food </p>
@@ -150,48 +154,58 @@
         <div class="mt-4"></div>
       </div>
 <!-- modal section -->
-      <section class="modal-kumpulan">
+</div> -->
+<section class="container">
+  <div class="d-flex justify-content-center mt-5">
+    <form  class="m-tengah">
+      <input type="text"  placeholder="Nama" required id="loginData">
+      <div class="d-flex justify-content-center mt-2">
+        <button class="btn btn-success" onclick="cache()">Login</button>
+      </div>
+    </form>
+  </div>
+</section>
+<section class="modal-kumpulan">
 
-        <div class="modal fade" id="modalku">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title"><i class="fas fa-shopping-cart text-success"></i> beli</h5>
-              </div>
-              <div class="modal-body">
-                <div class="d-flex justify-content-center">
-                  <input type="button" value="-" class="btn btn-danger" onclick="kurang()"> <input type="text" value="0" name="textview" readonly> <input type="button" value="+" class="btn btn-danger" onclick="tambah()">
-                </div>
-                <button class="btn btn-success mt-4" data-bs-target="#baka" data-bs-toggle="modal"><i class="fab fa-shopify"></i> beli</button>
-              </div>
-              <div class="modal-footer">
-                <a data-bs-dismiss="modal" class="btn btn-danger"><i class="fas fa-times-circle"></i> close</a>
-              </div>
-            </div>
-          </div>
+  <div class="modal fade" id="modalku">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fas fa-shopping-cart text-success"></i> beli</h5>
         </div>
-
-        <div class="modal fade" id="baka">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Uso Da Yo!!</h5>
-              </div>
-              <img src="img/download.jpg" alt="" class="img-fluid">
-              <div class="modal-body">
-                <p class="card-text">Tapi Bohongan :V</p>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-danger" data-bs-dismiss="modal"><i class="fas fa-times-circle"></i> Close</button>
-              </div>
-            </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-center">
+            <input type="button" value="-" class="btn btn-danger" onclick="kurang()"> <input type="text" value="0" name="textview" readonly> <input type="button" value="+" class="btn btn-danger" onclick="tambah()">
           </div>
+          <button class="btn btn-success mt-4" data-bs-target="#baka" data-bs-toggle="modal"><i class="fab fa-shopify"></i> beli</button>
         </div>
-      </section>
+        <div class="modal-footer">
+          <a data-bs-dismiss="modal" class="btn btn-danger"><i class="fas fa-times-circle"></i> close</a>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="modal fade" id="baka">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Uso Da Yo!!</h5>
+        </div>
+        <img src="img/download.jpg" alt="" class="img-fluid">
+        <div class="modal-body">
+          <p class="card-text">Tapi Bohongan :V</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-danger" data-bs-dismiss="modal"><i class="fas fa-times-circle"></i> Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     
     <p class=" m-4"></p>
-    <footer>
+    <footer class="h-bottom">
     <div class="bg-success p-4">
       <a href="#" class="navbar-brand text-white"><i class="fas fa-shopping-cart"></i> Toko kita</a>
       <div class="text-white">
@@ -201,9 +215,14 @@
     </footer>
     <!-- bts 5 js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- script -->
+    <script src="js/script.js"></script>
   </body>
 </html>
 <script>
+ 
+</script>
+<!-- <script>
   function tambah(){
     let t=document.querySelector("input[name=textview]");
     let nplus=eval(t.value++);
@@ -220,4 +239,4 @@
   }
 
 
-</script>
+</script> -->

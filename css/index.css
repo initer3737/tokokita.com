@@ -1,8 +1,20 @@
 /* 600px tablet min width 768 desktop  */
+.h-bottom{
+  margin-top: 6.5rem;
+}
+.m-tengah{
+  margin:10em auto;
+}
 img{
   min-height: 280px;
   max-height: 280px;
   width: 100%;
+}
+.bg-auth{
+  background-image:url(../img/loginpages.jpg);
+}
+.skrol ,body{
+  scroll-behavior: smooth;
 }
 .background{
   background-image: url(../img/background.png);
