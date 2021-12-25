@@ -30,7 +30,7 @@ img{
   height:20rem;
 }
 .carousel{
-  background-color: #e6f5dc;
+  background-image: url(../img/background.png);
 }
 .navbar-item{
   display: flex;
@@ -67,14 +67,10 @@ img{
 }
 
 @media screen and(max-width:576px) {
-    /* .row .col-4 .carousel-item .card img{
-    min-height:0.1rem;
-    max-height:0.1rem;
-    width: 100%;
-  } */
+  
 
-  .carousel-item .card-content img{
-    width: 100%;
-    height:auto;
+  .carousel-item .card{
+    width: 60px;
+    height: 20px;
   }
 }
