@@ -1,4 +1,53 @@
 /* 600px tablet min width 768 desktop  */
+*{
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* card food etc */
+.card img{
+  padding: 4.25px;
+  border-radius: 9.5px;
+  border-color: grey;
+}
+.about{
+  background-color: rgba(211, 211, 211, 60%);
+}
+.informasi{
+  color: rgb(21, 158, 51);
+  /* rgb(211, 40, 174) */
+  background-color: rgb(225, 226, 225);
+  border-radius: 100px;
+  padding: 10px;
+}
+.informasi:hover{
+  color: white;
+  background-color: rgb(21, 158, 51);
+  border-radius: 100px;
+  transition: all 0.5s;
+}
+/* products */
+.products{
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  
+  padding: 6px;
+  background-image: url(../img/background.png);
+}
+.products img{
+  padding: 20px;
+  border-radius:70%;
+  background-color: rgb(204, 196, 196);
+}
+.products img:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .h-bottom{
   margin-top: 6.5rem;
 }
@@ -18,10 +67,8 @@ img{
 }
 .background{
   background-image: url(../img/background.png);
-}
-.anime{
-  height: 200px;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 .mt-100{
   margin-top:40% ;
@@ -29,12 +76,16 @@ img{
 .carousel-item .card{
   height:20rem;
 }
+.carousel-item{
+  display: flex;
+
+}
 .carousel{
   background-image: url(../img/background.png);
 }
 .navbar-item{
   display: flex;
-
+  gap: 10px;
 }
 .navbar-toggler{
   float: right;
@@ -59,6 +110,14 @@ img{
   float: right;
   margin-right: 50%;
 }
+cursor{
+  background-color: greenyellow;
+}
+/* smoot scroll */
+.smooth{
+  scroll-behavior: smooth;
+  transition: all 0.2s;
+}
 @media screen and (max-width:992px) {
   .navbar-item{
     display: flex;
@@ -66,11 +125,19 @@ img{
   }
 }
 
-@media screen and(max-width:576px) {
-  
-
-  .carousel-item .card{
-    width: 60px;
-    height: 20px;
+@media screen and(max-width:600px) {
+  button .informasi{
+    color: white;
+    background-color: rgb(211, 40, 174);
+    border-radius: 100px;
+    transition: all 0.5s;
   }
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+footer{
+  border-top: solid rgb(31, 218, 62);
 }

@@ -1,6 +1,11 @@
 let tglstatus=false;
 let login=false;
 
+function tahun(){
+  let tahun=new Date().getFullYear();
+  document.getElementById('tahun').innerHTML=tahun;
+}
+
 function cache(){
   let p=document.getElementById("loginData").value;
   localStorage.setItem('username',p);
@@ -76,8 +81,11 @@ function gantigambar(){
 addEventListener('click',function(){
 
 })
+
 //panggil fungsi
+tahun();
 UserLogin();
+
 // localStorage.setItem menyimpan data di local storage
 // localStorage.getItem mengambil data di localStorage
 // localStorage.removeItem menghapus item tertentu
