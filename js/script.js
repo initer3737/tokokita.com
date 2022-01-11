@@ -24,7 +24,7 @@ function UserLogin(){
   //ketika user sudah login
   t.innerHTML=name;
   if(name){
-    Headers.location('pages/products.html');
+    Headers.location('../pages/products.html');
   }
 }
 

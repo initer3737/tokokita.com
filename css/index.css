@@ -10,12 +10,13 @@
 /* card food etc */
 .card img{
   padding: 4.25px;
+  margin: 2.125px;
   border-radius: 9.5px;
   border-color: grey;
 }
-.about{
+/* .about{
   background-color: rgba(211, 211, 211, 60%);
-}
+} */
 .informasi{
   color: rgb(21, 158, 51);
   /* rgb(211, 40, 174) */
@@ -34,8 +35,8 @@
   display: flex;
   gap: 10px;
   overflow-x: scroll;
-  
-  padding: 6px;
+  margin: 5px;
+  padding: 10px;
   background-image: url(../img/background.png);
 }
 .products img{
