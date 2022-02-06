@@ -11,9 +11,39 @@
       <!-- bts 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <style>
+      header{
+        position: relative;
+      }
+      .text-container{
+        position: absolute;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        z-index: 999;
+      }
+      .filter{
+        position: absolute;
+        background-color: rgb(0, 128, 111);
+        opacity: 0.7;
+        width: 100vw;
+      }
+      header video{
+        width: 100%;
+        object-fit: cover;
+        height: 70vh;
+      }
+      .formulir{
+        width: fit-content;
+
+      }
+    </style>
   </head>
   <body class="bg-auth">
-    <header class=" bg-success p-3">
+    <nav class=" bg-success p-3">
       <div class="nav navbar-nav navbar-expand-lg">
         <div class="navbar-dark">
           <div class="container-fluid ml-3">
@@ -38,17 +68,34 @@
           </div>
         </div>
       </div>
-    </header>
- 
-<section class="container">
-  <div class="d-flex justify-content-center mt-5">
-    <form  class="m-tengah">
-      <input type="text"  placeholder="Nama" required id="loginData">
-      <div class="d-flex justify-content-center mt-2">
-        <button class="btn btn-success" onclick="cache()">Login</button>
+    </nav>
+
+    <header>
+      <video src="video/Indoor Market - 4730.mp4" autoplay loop muted></video>
+      <div class="text-container text-white">
+        <center>
+          <h1>
+            Belanja Makin Mudah
+          </h1>
+          <h2>
+            Di Toko Kita
+          </h2>
+        </center>
       </div>
-    </form>
-  </div>
+      <div class="filter"></div>
+    </header>
+
+<section class="container">
+  <center>
+        <div class="bg-white rounded shadow formulir">
+          <form  class="m-tengah p-3">
+            <input type="text"  placeholder="Nama" required id="loginData">
+            <div class="d-flex justify-content-center mt-2">
+              <button class="btn btn-success rounded" onclick="cache()">Login</button>
+            </div>
+          </form>
+        </div>
+  </center>
 </section>
 <section class="modal-kumpulan">
 

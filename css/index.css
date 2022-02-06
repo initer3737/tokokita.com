@@ -61,7 +61,7 @@ img{
   width: 100%;
 }
 .bg-auth{
-  background-image:url(../img/loginpages.jpg);
+  background-color: #eee;
 }
 .skrol ,body{
   scroll-behavior: smooth;
