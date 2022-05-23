@@ -38,7 +38,7 @@
       }
       .formulir{
         width: fit-content;
-
+        /* padding: 2px 2px; */
       }
     </style>
   </head>
@@ -88,10 +88,14 @@
 <section class="container">
   <center>
         <div class="bg-white rounded shadow formulir">
-          <form  class="m-tengah p-3">
-            <input type="text"  placeholder="Nama" required id="loginData">
+          <form  class="m-tengah form-controls">
+            <img src="img/login.jpg" class="img-fluid rounded-pill p-3" alt="" srcset="">
+            <div class="form-floating">
+            <input type="text" class="form-control rounded shadow"  placeholder="Nama" required id="loginData">
+            <label for="loginData">Username</label>
+            </div>
             <div class="d-flex justify-content-center mt-2">
-              <button class="btn btn-success rounded" onclick="cache()">Login</button>
+              <button class="btn btn-outline-success rounded-pill px-3 py-2" onclick="cache()">Login</button>
             </div>
           </form>
         </div>
